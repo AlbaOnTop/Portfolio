@@ -12,14 +12,10 @@
     padding: 10px 20px 5px 20px; /* padding sopra ridotto, sotto quasi nullo */
 }
 .header h1 {
-    font-size: 4em;
+    font-size: 6vw;
     font-family: 'Roboto Slab', sans-serif;
     padding-bottom: 0px;
     margin-bottom: 0.2em; /* margine sotto ridotto */
-}
-body {
-    margin: 0;/* remove the default margin that a lot of browsers have */
-    padding: 0;/* this too */
 }
 .nav-links {
     display: flex;
@@ -35,7 +31,7 @@ body {
     flex: 1 1 33.33%; /* a bit strange but managed to make it work,  */
     display: flex;
     justify-content: center;
-    font-size: 1.5em;
+    font-size: 2vw;
     padding-bottom: 4px;
     transition: 
         background 0.3s,
@@ -44,11 +40,29 @@ body {
     color: var(--header-text-color);
     text-decoration: none; /* remove the underline */
     font-family: 'Roboto Condensed', sans-serif;
+    
 }
 
 .nav-links a:hover {
     color: var(--header-bg-color);
     background: var(--header-text-color);
-    font-size: 2em;
+    font-size: 3vw;
+}
+.footer{
+    bottom: 10px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+main {
+    flex: 1;
+}
+
+* {
+    outline: 1px solid red !important;
+}
