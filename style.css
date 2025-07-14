@@ -191,3 +191,8 @@ body {
 .project-content{
 	font-size: 1.5vw;
 }
+.contacts i, .contacts p{
+	display:inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
