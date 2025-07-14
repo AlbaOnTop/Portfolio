@@ -1,110 +1,193 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
 :root {
-    --header-bg-color: #00809D;
-    --header-text-color: #FF7601;
-    --main-bg-color: #ffebd9;
-    --main-text-color: #00809D;
-    --link-color: #db9600;
+	--header-bg-color: #00809D;
+	--header-text-color: #FF7601;
+	--main-bg-color: #ffebd9;
+	--main-text-color: #00809D;
+	--link-color: #db9600;
 }
+
+/* sezione header */
 .header {
-    background-color: var(--header-bg-color);
-    color: var(--header-text-color);
-    padding-top: 3.5vw;
-    display: flex;
-    align-items: flex-end;
-    text-shadow: 0 0 1.5px rgb(0, 0, 0);
+	 /*non so bene se devo mettere un display vedo dopo #TODO  */
+	background-color: var(--header-bg-color);
+	color: var(--header-text-color);
+	padding-top: 1.2vw;
+	padding-bottom: 1.2vw;
+	text-shadow: 0 0 1.5px rgb(0, 0, 0);
 }
 
 /* had to cuz suckd on mobile */
 @media (max-width: 600px) {
-    .header {
-        padding-top: 0.5em;
-        min-height: 40px;
-    }
+	.header {
+		padding-top: 0.5em;
+		min-height: 40px;
+	}
 }
 
 .header h1 {
-    font-size: clamp(2em, 6vw, 4em); /* sempre leggibile e responsivo */
-    font-family: 'Roboto Slab', sans-serif;
-    margin: 0;
-    margin-left: 20px;
-    padding: 0;
-    line-height: 1.1;
-    padding-bottom: 0.5em;
+	font-size: clamp(2em, 6vw, 4em);
+	/* sempre leggibile e responsivo */
+	font-family: 'Roboto Slab', sans-serif;
+	margin: 0;
+	margin-left: 20px;
+	padding: 0;
+	line-height: 1.1;
 }
+
+/* sezione <a> della barra per navigare */
 .nav-links {
-    display: flex;
-    align-items: stretch;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 100vw; 
-    background-color: var(--header-bg-color);
+	top: 0;
+	z-index: 10;
+	background-color: var(--header-bg-color);
+	width: 100%;
+	display: flex;
+	align-items: stretch;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
-.nav-links a {
-    flex: 1 1 33.33%; /* a bit strange but managed to make it work,  */
-    display: flex;
-    justify-content: center;
-    font-size: clamp(1.7em, 1.8vw, 2em);
-    padding-bottom: 4px;
-    transition: 
-        background 0.5s,
-        color 0.5s,
-        font-size 0.5s;
-    color: var(--header-text-color);
-    text-decoration: none; /* remove the underline */
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: bold;
-    
+
+.nav-links {
+	border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+	background-color: #db9600;
+	gap: 2px;
+}
+
+.nav-links a:not(:last-child) {
+	flex: 1 1 33.33%;
+	/* a bit strange but managed to make it work,  */
+	display: flex;
+	justify-content: center;
+	font-size: clamp(1.7em, 1.8vw, 2em);
+	padding: 0.2vw;
+	transition:
+		background 0.5s,
+		color 0.5s,
+		font-size 0.5s;
+	color: var(--header-text-color);
+	background-color: var(--header-bg-color);
+	text-decoration: none;
+	/* remove the underline */
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .nav-links a:hover {
-    color: var(--header-bg-color);
-    background: var(--header-text-color);
-    font-size: clamp(1.9em, 2vw, 2.2em);
+	color: var(--header-bg-color);
+	background: var(--header-text-color);
+	font-size: clamp(1.9em, 2vw, 2.2em);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
-.footer{
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    transition: all 1s bottom;
+
+.nav-links a.active { 
+	background: var(--main-bg-color);
+	color: var(--header-bg-color);
+}
+
+a{
+	color: var(--link-color);
+	text-decoration: none; /* toglie le barrette sotto*/
+	transition: color 0.3s ease;
+}
+
+.footer {
+    display: block;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 3px;
+	transition: all 1s bottom;
 }
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--main-bg-color);
-    font-family: 'Roboto Condensed', sans-serif;
-    color: var(--main-text-color);
+    /* border-radius: 5px; */
+    /* border: red 2px solid; */
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	display: block;
+	background-color: var(--header-bg-color);
+	font-family: 'Roboto Condensed', sans-serif;
+	color: var(--main-text-color);
 }
-main {
-    flex: 1;
-}
+/* contenuto della pagina */
 #content {
-    padding-left: 2vw;
-    padding-top: 1vw;
-    font-size: clamp(1.5em, 2vw, 1.7em);
+	padding-bottom: 2vw;
+	background-color: var(--main-bg-color);
+    /* border: green 2px solid; */
+	border-radius: 5px;
+	border-top-left-radius: 0px;
+	padding-left: 2vw;
+	padding-top: 0.1vw;
+	font-size: clamp(1.5em, 2vw, 1.7em);
 }
-/* per debugging */
-/* * {
-    outline: 1px solid red !important;
-} */
-a {
-    color: var(--link-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
+.note {
+	font-size: 0.8em;
+	color: var(--main-text-color);
 }
-.note{
-    font-size: 0.8em;
-    color: var(--main-text-color);
-}
+
 #content h1 {
-    margin-bottom: 0px;
+	margin-bottom: 0px;
 }
+
 #content p {
-    margin-top: 0px;
-    margin-bottom: 0.1em;
+	margin-top: 0px;
+	margin-bottom: 0.1em;
+}
+
+/* contenitori del contenuto */
+.closebutton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 1rem;
+	font-size: clamp(2em, 2.5vw, 2.5em);
+	font-weight: bold;
+	color: black;
+	user-select: none;
+	cursor: no-drop;
+}
+
+.closebutton:hover{
+    color: red;
+}
+
+.container {
+	/* border: red 1px solid; */
+	background-color: var(--link-color);
+	/* bordo visibile attorno a .files */
+	padding: 15px 20px;
+	padding-bottom: 0px;
+	/* spessore del bordo */
+	box-shadow: 0 0 8px black;
+	display: block;
+	justify-content: center;
+	/* centra .files dentro */
+	margin: auto;
+	width: fit-content;
+	/* si adatta a .files + padding */
+	border-radius: 15px;
+}
+
+.files {
+	/* border: black 2px solid; */
+	width: 90vw;
+	max-width: 980px;
+}
+/* debug option */
+*{
+    /* border: red 1px solid; */
+    /* border-radius: 5px; */
+}
+.project-head{
+	margin-bottom: 1px;
+	font-size: 1.8;
+}
+.project-content{
+	font-size: 1.5vw;
 }
