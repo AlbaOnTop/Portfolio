@@ -78,8 +78,8 @@
 }
 
 .nav-links a:hover {
-	color: var(--header-bg-color);
-	background: var(--header-text-color);
+	color: var(--main-text-color);
+	background: var(--main-bg-color);
 	font-size: clamp(1.9em, 2vw, 2.2em);
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
