@@ -19,12 +19,8 @@
 }
 
 /* had to cuz suckd on mobile */
-@media (max-width: 600px) {
-	.header {
-		padding-top: 0.5em;
-		min-height: 40px;
-	}
-}
+
+
 
 .header h1 {
 	font-size: clamp(2em, 6vw, 4em);
@@ -195,4 +191,46 @@ body {
 	display:inline-block;
 	vertical-align: middle;
 	margin-right: 10px;
+}
+@media (max-width: 600px) {
+	.header h1 {
+		font-size: 1.8em;
+		margin-left: 10px;
+	}
+
+	.nav-links a:not(:last-child) {
+		font-size: 1.2em;
+		padding: 0.5em;
+	}
+
+	.nav-links a:hover {
+		font-size: 1.3em;
+	}
+
+	.container {
+		width: 95vw;
+		padding: 10px;
+	}
+
+	.files {
+		width: 100%;
+	}
+
+	#content {
+		font-size: 1em;
+		padding: 1em;
+	}
+
+	.project-head {
+		font-size: 1.2em;
+	}
+
+	.project-content {
+		font-size: 1em;
+	}
+
+	.closebutton {
+		font-size: 2em;
+		padding: 0 0.5rem;
+	}
 }
