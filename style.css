@@ -192,6 +192,10 @@ body {
 	vertical-align: middle;
 	margin-right: 10px;
 }
+.code{
+	font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+	font-size: 0.8em;
+}
 @media (max-width: 600px) {
 	.header{
 		padding-bottom: 4vw;
