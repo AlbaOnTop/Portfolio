@@ -193,6 +193,9 @@ body {
 	margin-right: 10px;
 }
 @media (max-width: 600px) {
+	.header{
+		padding-bottom: 4vw;
+	}
 	.header h1 {
 		font-size: 1.8em;
 		margin-left: 10px;
@@ -217,7 +220,7 @@ body {
 	}
 
 	#content {
-		font-size: 0.4em;
+		font-size: 0.9em;
 		padding: 1em;
 	}
 
